@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
+  FlatList,
 } from 'react-native';
 import {Modal, TextInput} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -77,6 +78,21 @@ export default function TabBar() {
         return (
           <View>
             <Text> API Data </Text>
+            {
+
+              data.length? 
+              <FlatList
+              data={data}
+              renderItem={({item}) => 
+                <View style = {{marginTop: 10, borderRadius:10, borderWidth:1, borderColor: '#a855f7'}}>
+                  <Text style = {{fontSize: 20, fontWeight: '600'}}> {item.id} </Text>
+                  <Text style = {{fontSize: 15, fontWeight: '500'}}> {item.title} </Text>
+                  <Text> {item.body} </Text>
+                </View>
+              }
+              />
+              :null
+            }
           </View>
         );
       case 'Reviews':
@@ -96,7 +112,8 @@ export default function TabBar() {
                     {[...Array(item.ratings)].map(stars => (
                       
                       <Entypo name="star" color="gold" size={18} />
-                    ))}
+                    )
+                    )}
                     {[...Array(5 - item.ratings)].map(stars => (
                       <Entypo name="star" color="gray" size={18} />
                     ))}

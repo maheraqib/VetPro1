@@ -16,10 +16,13 @@
     "@react-navigation/stack": "6.3.29",
     "react": "18.2.0",
     "react-native": "0.74.0",
+    "react-native-document-picker": "^9.3.1",
     "react-native-image-picker": "^8.2.1",
+    "react-native-modal": "13.0.1",
     "react-native-safe-area-context": "^5.4.0",
     "react-native-screens": "^4.10.0",
     "react-native-vector-icons": "^10.1.0",
+    "react-native-video": "5.2.1",
     "validator": "^13.15.0"
   },
   "devDependencies": {
