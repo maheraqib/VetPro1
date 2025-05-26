@@ -63,7 +63,6 @@ const ProfileScreen = () => {
             </View>
         </View>
       </View>
-      <FormScreen/>
       </View>
     </ScrollView>
   )

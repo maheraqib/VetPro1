@@ -19,15 +19,15 @@ export default function TabBar() {
   const [reviewText, setReviewText] = useState('');
   const [selectedRating, setSelectedRating] = useState(0);
 
-    const getDataFromAPI = async() => {
-    const url = 'https://jsonplaceholder.typicode.com/posts'
-    let result = await fetch(url)
-    result = await result.json();
-    setData(result)
-  }
-  useEffect(() => {
-    getDataFromAPI();
-  }, [])
+  //   const getDataFromAPI = async() => {
+  //   const url = 'https://jsonplaceholder.typicode.com/posts'
+  //   let result = await fetch(url)
+  //   result = await result.json();
+  //   setData(result)
+  // }
+  // useEffect(() => {
+  //   getDataFromAPI();
+  // }, [])
   
   const users = [
     {
@@ -77,8 +77,8 @@ export default function TabBar() {
       case 'About':
         return (
           <View>
-            <Text> API Data </Text>
-            {
+            <Text> API call but commented </Text>
+            {/* {
 
               data.length? 
               <FlatList
@@ -92,7 +92,7 @@ export default function TabBar() {
               }
               />
               :null
-            }
+            } */}
           </View>
         );
       case 'Reviews':
